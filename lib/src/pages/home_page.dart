@@ -27,10 +27,12 @@ class HomePage extends StatelessWidget {
                 })
           ],
         ),
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [_swiperTarjetas(), _footer(context)],
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [_swiperTarjetas(), _footer(context)],
+            ),
           ),
         ));
   }
@@ -58,7 +60,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              padding: EdgeInsets.only(left: 20.0),
+              padding: EdgeInsets.only(left: 20.0, top: 20.0),
               child: Text('Populares',
                   style: Theme.of(context).textTheme.subtitle1)),
           SizedBox(
